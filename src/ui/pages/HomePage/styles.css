@@ -1,0 +1,16 @@
+#home-page header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 16px 24px;
+}
+
+#home-page header .page-title {
+  display: flex;
+
+  align-items: center;
+}
+
+#home-page header .page-title h1 {
+  margin-bottom: 0 !important;
+}
