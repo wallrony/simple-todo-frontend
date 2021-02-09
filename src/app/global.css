@@ -1,5 +1,7 @@
 :root {
   --color-primary: darkblue;
+  --color-sucess: mediumseagreen;
+  --color-danger: firebrick;
   --color-secondary: coral;
 
   --color-shadow: rgba(111, 111, 111, .2);

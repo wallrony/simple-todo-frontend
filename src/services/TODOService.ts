@@ -3,6 +3,7 @@ import CreateTODODTO from "../domain/dto/CreateTODODTO";
 import UpdateTODODTO from "../domain/dto/UpdateTODODTO";
 import IServiceResponse from "../domain/models/IServiceResponse";
 import ITODO from "../domain/models/ITODO";
+import { sortById } from "../utils/SortUtils";
 
 class TODOService {
   async fetchAll(): Promise<IServiceResponse<ITODO[]>> {
@@ -10,6 +11,8 @@ class TODOService {
 
     try {
       result.data = await new Facade().fetchAllTODO();
+
+      result.data.sort(sortById)
     } catch(e) {
       if(e.response) {
         result.error = e.response.data.message;
